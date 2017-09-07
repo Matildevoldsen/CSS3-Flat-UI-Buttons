@@ -1,0 +1,193 @@
+//Vars
+$primary-text-color: #1abc9c;
+$info-text-color: #2980b9;
+$danger-text-color: #e74c3c;
+$warning-text-color: #f1c40f;
+$white-text-color: white;
+$dark-text-color: #4a5152;
+$black-text-color: black;
+$border-radius: 5px;
+$extra-bordered: 80px;
+$no-border: 0px;
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: whitesmoke;
+  font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//Container
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+//Panel
+.panel {
+  background-color: white;
+  padding:8px;
+  min-width:200px;
+  min-height:100px;
+}
+
+//Styles
+
+.btn {
+  margin-top:1px;
+  display: inline-flex;
+  text-align: center;
+  padding: 15px 32px;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  outline: none;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+  -webkit-box-pack: center;
+  position: relative;
+}
+
+.btn-primary {
+  background-color: $primary-text-color;
+  color: $white-text-color;
+}
+
+.btn-primary:hover {
+  background-color: #17a88c;
+}
+
+.btn-info {
+  background-color: $info-text-color;
+  color: $white-text-color;
+}
+
+.btn-info:hover {
+  background-color: #2570a3;
+}
+
+.btn-danger {
+  background-color: $danger-text-color;
+  color: $white-text-color;
+}
+
+.btn-danger:hover {
+  background-color: #d64638;
+}
+
+.btn-warning {
+  background-color: $warning-text-color;
+  color: $black-text-color;
+}
+
+.btn-warning:hover {
+  background-color: #deb50e;
+}
+
+.btn-dark {
+  background-color: $dark-text-color;
+  color: $white-text-color;
+}
+
+.btn-dark:hover {
+  background-color: #596263;
+}
+
+.btn-black {
+  background-color: $black-text-color;
+  color: $white-text-color;
+}
+
+.btn-black:hover {
+  color: $black-text-color;
+  background-color: $white-text-color;
+  border:1.5px solid #000;
+}
+
+//Helper Classes
+.border-radius-less {
+  -webkit-border-radius: $no-border !important;
+  -moz-border-radius: $no-border !important;
+  border-radius: $no-border !important;
+}
+.extra-bordered {
+  -webkit-border-radius: $extra-bordered;
+  -moz-border-radius: $extra-bordered;
+  border-radius: $extra-bordered;
+}
+
+.btn-fade-hover {
+  -webkit-transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+  -moz-transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+  -ms-transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+  -o-transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+  transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+}
+
+.btn-fade-hover-slow {
+  -webkit-transition: all 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+  -moz-transition: all 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+  -ms-transition: all 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+  -o-transition: all 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+  transition: all 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+}
+
+.align-text-left {
+  text-align: left !important;
+}
+
+.align-text-center {
+  text-align: center !important;
+}
+
+.align-text-right {
+  text-align: right !important;
+}
