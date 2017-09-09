@@ -6,7 +6,6 @@ $warning-text-color: #f1c40f;
 $white-text-color: white;
 $dark-text-color: #4a5152;
 $black-text-color: black;
-$border-radius: 5px;
 $extra-bordered: 80px;
 $no-border: 0px;
 
@@ -77,10 +76,16 @@ table {
   padding:8px;
   min-width:200px;
   min-height:100px;
+  justify-content: center;
 }
 
 //Styles
-
+@mixin border-radius($border-radius) {
+  -webkit-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
 .btn {
   margin-top:1px;
   display: inline-flex;
@@ -89,9 +94,7 @@ table {
   border: 1px solid transparent;
   font-size: 1rem;
   outline: none;
-  -webkit-border-radius: $border-radius;
-  -moz-border-radius: $border-radius;
-  border-radius: $border-radius;
+  @include border-radius(5px);
   -webkit-box-pack: center;
   position: relative;
 }
